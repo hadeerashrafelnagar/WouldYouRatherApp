@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Would You Rather! Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
 
-### `yarn start`
+1. Description
+2. Instructions
+3. Running
+4. Important Points
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Description
 
-### `yarn test`
+- The final Udacity front-end web development Advanced program project.
+- build a web app that lets a user play the Would You Rather? game. The game goes like this: A user is asked a question in the form: Would you rather [option A] or [option B] ?.
+- Users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Use both: 
+    1. This repo (https://github.com/udacity/reactnd-project-would-you-rather-starter) is your starter code for the project.
+    2. Recommendation :(https://github.com/facebook/create-react-app) to generate your submission since it's the easiest way to ensure you have everything the project reviewer will need to install and run your app.
+- `cd` into your new folder and run : 
+  1. `npm install` to install all project dependencies.
+  2. `npm install bootstrap`.
+  2. `npm install react-router-dom`.
+  3. `npm install sweetalert2 `
+- modifying a lot CSS in `App.css` and add new styles.
+- App Architecture:   ***every folder represent what it includes and same with files***
+    1. actions folder:
+        - `actionTypes.js`
+        - `questionActions.js`
+        - `userActions.js`
+    3. reducers folder:
+        - `questionsReducers.js`
+        - `usersReducers.js`
+    2. handlers folder:   *** Api handler Functions ***
+        - `questionsApiData.js`
+        - `usersApiData.js`
+    4. store folder:
+        - `index.js`
+    5. components folder:
+        - `SignIn.js`
+        - `Questions.js`
+        - `QuestionDetails.js`
+        - `LeaderBoard.js`
+        - `NewQue.js`
+        - `NavBar.js`
+        - `LogOut.js`
+    6. data folder:
+        - includes the `_DATA.js` and `README.md` files
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Running
 
-### `yarn eject`
+- start the ***development server*** with `npm start` / `npm run start` to launch.
+- open `http://localhost:3000/` in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Important Points
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ - development server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. To simplify the development process, a backend server has been provided. The provided file [`_DATA.js`](src/data/_DATA.js) a fake database and contains methods that let you access the data and another provided [`README.md`](src/data/README.md) file contains the explanation of how to use methods inside [`_DATA.js`] that you will need to perform necessary operations on the backend part.
