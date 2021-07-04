@@ -22,13 +22,7 @@
 - Use both: 
     1. This repo (https://github.com/udacity/reactnd-project-would-you-rather-starter) is your starter code for the project.
     2. Recommendation :(https://github.com/facebook/create-react-app) to generate your submission since it's the easiest way to ensure you have everything the project reviewer will need to install and run your app.
-- `cd` into your new folder and run : 
-  1. `npm install` to install all project dependencies.
-  2. `npm install bootstrap`.
-  3. `npm install react-router-dom`.
-  4. `npm install react-redux`.
-  5. `npm install redux`
-  6. `npm install sweetalert2 `
+- `cd` into your new folder and run `npm install` to install all project dependencies.
 - modifying a lot CSS in `App.css` and add new styles.
 - App Architecture:   ***every folder represent what it includes and same with files***
     1. actions folder:
