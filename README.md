@@ -25,8 +25,10 @@
 - `cd` into your new folder and run : 
   1. `npm install` to install all project dependencies.
   2. `npm install bootstrap`.
-  2. `npm install react-router-dom`.
-  3. `npm install sweetalert2 `
+  3. `npm install react-router-dom`.
+  4. `npm install react-redux`.
+  5. `npm install redux`
+  6. `npm install sweetalert2 `
 - modifying a lot CSS in `App.css` and add new styles.
 - App Architecture:   ***every folder represent what it includes and same with files***
     1. actions folder:
