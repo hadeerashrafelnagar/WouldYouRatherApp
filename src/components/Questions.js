@@ -80,7 +80,7 @@ class Home extends React.Component {
                           <p className="optionone">{q.optionone}</p>
                           <br></br>
                           <p className="optiontwo">{q.optiontwo}</p>
-                          <Link to={`/quedetails/${q.id}`}>
+                          <Link to={`/questions/${q.id}`}>
                             <button
                               type="button"
                               value={q.id}
@@ -126,7 +126,7 @@ class Home extends React.Component {
                           <p className="optionone">{q.optionone}</p>
                           <br></br>
                           <p className="optiontwo">{q.optiontwo}</p>
-                          <Link to={`/quedetails/${q.id}`}>
+                          <Link to={`/questions/${q.id}`}>
                             <button
                               value={q.id}
                               onClick={(e) =>
