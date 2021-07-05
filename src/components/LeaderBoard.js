@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const LeaderBoard = (props) => {
-  const { users } = props;
+  const { users, questionanswer, newQuestion, authUser } = props;
 
   return (
     <React.Fragment>
@@ -33,21 +33,43 @@ const LeaderBoard = (props) => {
                 <ul className="list-group">
                   <li className="list-group-item d-flex justify-content-between ">
                     Answered Questions
-                    <span className="badge rounded-pill">
-                      {user.answeredque}
-                    </span>
+                    {user.id === authUser.id ? (
+                      <span className="badge rounded-pill">
+                        {user.answeredque + Object.keys(questionanswer).length}
+                      </span>
+                    ) : (
+                      <span className="badge rounded-pill">
+                        {user.answeredque}
+                      </span>
+                    )}
                   </li>
                   <li className="list-group-item d-flex justify-content-between ">
                     Asked Questions
-                    <span className="badge rounded-pill">{user.askedque}</span>
+                    {user.id === authUser.id ? (
+                      <span className="badge rounded-pill">
+                        {user.askedque + Object.keys(newQuestion).length}
+                      </span>
+                    ) : (
+                      <span className="badge rounded-pill">
+                        {user.askedque}
+                      </span>
+                    )}
                   </li>
                 </ul>
               </div>
               <div className="col">
                 <h5 className="title">Score</h5>
-                <span className="badge bg-primary rounded-pill">
-                  {user.answeredque + user.askedque}
-                </span>
+                {(newQuestion || questionanswer) && user.id === authUser.id ? (
+                  <span className="badge bg-primary rounded-pill">
+                    {user.answeredque +
+                      Object.keys(questionanswer).length +
+                      (user.askedque + Object.keys(newQuestion).length)}
+                  </span>
+                ) : (
+                  <span className="badge bg-primary rounded-pill">
+                    {user.answeredque + user.askedque}
+                  </span>
+                )}
               </div>
             </div>
           ))}
@@ -59,7 +81,8 @@ const LeaderBoard = (props) => {
 const mapStateToProps = (state) => ({
   users: state.users,
   authUser: state.authUser,
-  questions: state.questions,
+  questionanswer: state.questionanswer,
+  newQuestion: state.newQuestion,
 });
 
 export default connect(mapStateToProps)(LeaderBoard);
