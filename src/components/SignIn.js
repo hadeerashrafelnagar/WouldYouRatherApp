@@ -32,7 +32,7 @@ class SignIn extends React.Component {
         text: "You must select a user!",
       });
     }
-    if (this.referrer === "/signin") {
+    if (this.referrer==='/' || this.referrer==='/signin') {
       this.setState({ value: "" });
       history.push("/home");
     } else {
