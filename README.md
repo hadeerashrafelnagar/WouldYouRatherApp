@@ -45,6 +45,8 @@
         - `NewQue.js`
         - `NavBar.js`
         - `LogOut.js`
+        - `ErrorPage.js`
+        - `QuestionVoteCard.js`
     6. data folder:
         - includes the `_DATA.js` and `README.md` files
 
