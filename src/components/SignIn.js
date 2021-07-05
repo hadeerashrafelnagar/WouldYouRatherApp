@@ -10,6 +10,10 @@ class SignIn extends React.Component {
 
   componentDidMount() {
     getUsers();
+    const {
+      location: { pathname },
+    } = this.props;
+    this.referrer = pathname;
   }
 
   handleSignIn = (e) => {
@@ -18,6 +22,7 @@ class SignIn extends React.Component {
   };
 
   handleSubmit = () => {
+    const { history } = this.props;
     const { userId } = this.state;
     setAuthUser(userId);
     if (userId === "") {
@@ -26,9 +31,13 @@ class SignIn extends React.Component {
         title: "Oops...",
         text: "You must select a user!",
       });
-    } else {
-      this.props.history.replace("/home");
+    }
+    if (this.referrer === "/signin") {
       this.setState({ value: "" });
+      history.push("/home");
+    } else {
+      this.setState({ value: "" });
+      history.push(this.referrer);
     }
   };
 
